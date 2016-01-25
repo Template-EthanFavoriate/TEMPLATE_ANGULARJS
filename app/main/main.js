@@ -15,6 +15,6 @@ mvcApp.config(['$routeProvider',
         templateUrl: 'about/about.html',
         controller: 'aboutCrtl'
       }).otherwise({
-        redirectTo: '/'
+        redirectTo: '/about'
       });
   }]);

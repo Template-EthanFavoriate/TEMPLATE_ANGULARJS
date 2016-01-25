@@ -3,7 +3,7 @@
 var module_about = angular.module('module_about',[]);
 
 /* Controllers */
-module_about.controller('aboutCrtl',aboutCrtl);
+module_about.controller('aboutCrtl',['$scope','aboutFac',aboutCrtl]);
 function aboutCrtl($scope,aboutFac){
 	$scope.about_author='ethan wang';
 	//Now I'm going to use this factory
@@ -13,7 +13,7 @@ function aboutCrtl($scope,aboutFac){
 /* Model */
 module_about.factory('aboutFac',aboutFac);
 function aboutFac(){
-	var factory={};	
+	var factory={};
 	factory.doGreet = function(){
 		alert('doGreet method called!');
 	}
